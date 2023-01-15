@@ -26,7 +26,8 @@ export const products = [
     'Rating Avg': 4.2,
     'Rating Count': 8,
     'Inventory Count': 21,
-    'Date Created': '2018-03-03 17:41:13'
+    'Date Created': '2018-03-03 17:41:13',
+    gender: 'Male'
   },
   {
     id: 7615,
@@ -57,7 +58,8 @@ export const products = [
     'Rating Avg': 4.5,
     'Rating Count': 10,
     'Inventory Count': 8,
-    'Date Created': '2018-03-20 22:24:21'
+    'Date Created': '2018-03-20 22:24:21',
+    gender: 'Female'
   },
   {
     id: 8100,
@@ -87,7 +89,8 @@ export const products = [
     'Rating Avg': 4.2,
     'Rating Count': 11,
     'Inventory Count': 9,
-    'Date Created': '2018-03-16 21:55:28'
+    'Date Created': '2018-03-16 21:55:28',
+    gender: 'Male'
   },
   {
     id: 6489,
@@ -116,7 +119,8 @@ export const products = [
     'Rating Avg': 4.9,
     'Rating Count': 4,
     'Inventory Count': 19,
-    'Date Created': '2018-02-28 23:37:28'
+    'Date Created': '2018-02-28 23:37:28',
+    gender: 'Female'
   },
   {
     id: 7732,
@@ -125,7 +129,7 @@ export const products = [
     'Product URL': 'https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg',
     Price: 68,
     'Retail Price': 68,
-    image: 'https://www.domain.com/images/heh-2172_600x600.png',
+    image: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Clothing>Tops>Sweaters',
@@ -145,7 +149,8 @@ export const products = [
     'Rating Avg': 4.6,
     'Rating Count': 22,
     'Inventory Count': 3,
-    'Date Created': '2018-03-01 20:18:20'
+    'Date Created': '2018-03-01 20:18:20',
+    gender: 'Male'
   },
   {
     id: 7609,
@@ -154,7 +159,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/heh-2211',
     Price: 34.99,
     'Retail Price': 34.99,
-    image: 'https://www.domain.com/images/heh-2211_600x600.png',
+    image: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Shoes>Sneakers>Slip-On Sneakers',
@@ -175,7 +180,8 @@ export const products = [
     'Rating Avg': 3.9,
     'Rating Count': 5,
     'Inventory Count': 2,
-    'Date Created': '2018-03-20 22:15:34'
+    'Date Created': '2018-03-20 22:15:34',
+    gender: 'Male'
   },
   {
     id: 7675,
@@ -184,7 +190,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/dko-camel',
     Price: 54.49,
     'Retail Price': 54.49,
-    image: 'https://www.domain.com/images/dko-camel_600x600.png',
+    image: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Clothing>Tops>Sweaters|Back In Stock|Featured Products',
@@ -204,7 +210,8 @@ export const products = [
     'Rating Avg': 5,
     'Rating Count': 2,
     'Inventory Count': 20,
-    'Date Created': '2018-03-19 20:53:04'
+    'Date Created': '2018-03-19 20:53:04',
+    gender: 'Female'
   },
   {
     id: 7463,
@@ -213,7 +220,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/wks-5026',
     Price: 62,
     'Retail Price': 62,
-    image: 'https://www.domain.com/images/wks-5026_600x600.png',
+    image: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Dresses>Formal Dresses|All Dresses',
@@ -233,7 +240,8 @@ export const products = [
     'Rating Avg': 5,
     'Rating Count': 9,
     'Inventory Count': 0,
-    'Date Created': '2018-03-01 19:59:05'
+    'Date Created': '2018-03-01 19:59:05',
+    gender: 'Female'
   },
   {
     id: 7677,
@@ -242,7 +250,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/pch-8738',
     Price: 32,
     'Retail Price': 32,
-    image: 'https://www.domain.com/images/pch-8738_600x600.png',
+    image: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Shoes>Sneakers>Slip-On Sneakers',
@@ -264,7 +272,8 @@ export const products = [
     'Rating Avg': 4.5,
     'Rating Count': 1,
     'Inventory Count': 8,
-    'Date Created': '2019-01-31 16:24:09'
+    'Date Created': '2019-01-31 16:24:09',
+    gender: 'Female'
   },
   {
     id: 8099,
@@ -273,7 +282,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/pch-8475',
     Price: 36,
     'Retail Price': 36,
-    image: 'https://www.domain.com/images/pch-8475_600x600.png',
+    image: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Home>Home Decor>Pillows',
@@ -293,7 +302,8 @@ export const products = [
     'Rating Avg': 4,
     'Rating Count': 1,
     'Inventory Count': 18,
-    'Date Created': '2018-02-28 19:03:26'
+    'Date Created': '2018-02-28 19:03:26',
+    gender: 'Female'
   },
   {
     id: 7425,
@@ -302,7 +312,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/bco-sk101',
     Price: 84,
     'Retail Price': 110,
-    image: 'https://www.domain.com/images/bco-sk101_600x600.png',
+    image: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Clothing>Tops>Jackets|Clearance|Tops On Sale',
@@ -322,7 +332,8 @@ export const products = [
     'Rating Avg': 5,
     'Rating Count': 1,
     'Inventory Count': 17,
-    'Date Created': '2018-05-04 21:32:28'
+    'Date Created': '2018-05-04 21:32:28',
+    gender: 'Male'
   },
   {
     id: 8102,
@@ -331,7 +342,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/heh-2254',
     Price: 32,
     'Retail Price': 32,
-    image: 'https://www.domain.com/images/heh-2254_600x600.png',
+    image: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Shoes>Heels>Pumps|New Arrivals|Featured Products',
@@ -351,7 +362,8 @@ export const products = [
     'Rating Avg': 4.7,
     'Rating Count': 5,
     'Inventory Count': 10,
-    'Date Created': '2019-01-31 16:48:23'
+    'Date Created': '2019-01-31 16:48:23',
+    gender: 'Male'
   },
   {
     id: 9964,
@@ -360,7 +372,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/bco-2208',
     Price: 14.95,
     'Retail Price': 14.95,
-    image: 'https://www.domain.com/images/bco-2208_600x600.png',
+    image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Home>Desk Decor>Journals',
@@ -380,7 +392,8 @@ export const products = [
     'Rating Avg': 4,
     'Rating Count': 32,
     'Inventory Count': 5,
-    'Date Created': '2018-10-18 15:19:37'
+    'Date Created': '2018-10-18 15:19:37',
+    gender: 'Male'
   },
   {
     id: 10440,
@@ -389,7 +402,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/koi-721',
     Price: 52,
     'Retail Price': 78,
-    image: 'https://www.domain.com/images/koi-721_600x600.png',
+    image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Dresses>Off-The-Shoulder Dresses|Dresses On Sale',
@@ -409,7 +422,8 @@ export const products = [
     'Rating Avg': 3.2,
     'Rating Count': 15,
     'Inventory Count': 30,
-    'Date Created': '2018-03-03 17:38:50'
+    'Date Created': '2018-03-03 17:38:50',
+    gender: 'Female'
   },
   {
     id: 6060,
@@ -418,7 +432,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/vbh-v5102',
     Price: 44,
     'Retail Price': 60,
-    image: 'https://www.domain.com/images/vbh-v5102_600x600.png',
+    image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Clothing>Bottoms>Pants|All Bottoms',
@@ -440,7 +454,8 @@ export const products = [
     'Rating Avg': 3.8,
     'Rating Count': 33,
     'Inventory Count': 1,
-    'Date Created': '2018-02-28 23:57:53'
+    'Date Created': '2018-02-28 23:57:53',
+    gender: 'Unisex'
   },
   {
     id: 10448,
@@ -449,7 +464,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/ske-15460',
     Price: 74.49,
     'Retail Price': 74.49,
-    image: 'https://www.domain.com/images/ske-15460_600x600.png',
+    image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Shoes>Boots>Flat Boots',
@@ -469,7 +484,8 @@ export const products = [
     'Rating Avg': 5,
     'Rating Count': 6,
     'Inventory Count': 0,
-    'Date Created': '2018-06-25 18:09:07'
+    'Date Created': '2018-06-25 18:09:07',
+    gender: 'Unisex'
   },
   {
     id: 8137,
@@ -478,7 +494,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/pch-8705',
     Price: 50,
     'Retail Price': 108,
-    image: 'https://www.domain.com/images/pch-8705_600x600.png',
+    image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Dresses>Lace Dresses|Dresses>All Dresses|New Arrivals',
@@ -500,7 +516,8 @@ export const products = [
     'Rating Avg': 5,
     'Rating Count': 4,
     'Inventory Count': 0,
-    'Date Created': '2019-02-15 20:33:28'
+    'Date Created': '2019-02-15 20:33:28',
+    gender: 'Unisex'
   },
   {
     id: 10018,
@@ -509,7 +526,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/pgf-ess',
     Price: 68,
     'Retail Price': 68,
-    image: 'https://www.domain.com/images/pgf-ess_600x600.png',
+    image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Dresses>Maxi Dresses|Dresses>All Dresses|New Arrivals',
@@ -531,7 +548,8 @@ export const products = [
     'Rating Avg': 4.8,
     'Rating Count': 12,
     'Inventory Count': 24,
-    'Date Created': '2019-02-20 21:38:02'
+    'Date Created': '2019-02-20 21:38:02',
+    gender: 'Unisex'
   },
   {
     id: 5670,
@@ -540,7 +558,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/heh-2223',
     Price: 40,
     'Retail Price': 40,
-    image: 'https://www.domain.com/images/heh-2223_600x600.png',
+    image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Home>Home Decor>Pillows',
@@ -560,6 +578,7 @@ export const products = [
     'Rating Avg': 4,
     'Rating Count': 3,
     'Inventory Count': 8,
+    gender: 'Male',
     'Date Created': '2018-03-01 20:28:28'
   },
   {
@@ -569,7 +588,7 @@ export const products = [
     'Product URL': 'https://www.domain.com/product/pgf-rik',
     Price: 36,
     'Retail Price': 36,
-    image: 'https://www.domain.com/images/pgf-rik_600x600.png',
+    image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
     'Search Keywords': 'lorem, ipsum, dolor, ...',
     Description: 'Sociosqu facilisis duis ...',
     Category: 'Home>Home Decor>Pillows',
@@ -589,6 +608,7 @@ export const products = [
     'Rating Avg': 5,
     'Rating Count': 3,
     'Inventory Count': 11,
-    'Date Created': '2018-03-16 22:17:50'
+    'Date Created': '2018-03-16 22:17:50',
+    gender: 'Female'
   }
 ];

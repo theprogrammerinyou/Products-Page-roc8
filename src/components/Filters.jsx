@@ -27,10 +27,21 @@ export function Filters() {
       });
       setProducts(filteredProducts);
     }
-    // filter
-    if (sizes.length > 0 && brands.length > 0) {
+    // filter products based on gender
+    if (genderFilter.length > 0) {
       const filteredProducts = products.filter((p) => {
-        return sizes.includes(p.Size) && brands.includes(p.Brand);
+        return genderFilter.includes(p.genderFilter);
+      });
+      setProducts(filteredProducts);
+    }
+    // filter
+    if (sizes.length > 0 && brands.length > 0 && genderFilter.length > 0) {
+      const filteredProducts = products.filter((p) => {
+        return (
+          sizes.includes(p.Size) &&
+          brands.includes(p.Brand) &&
+          genderFilter.includes(p.genderFilter)
+        );
       });
       setProducts(filteredProducts);
     }
@@ -53,7 +64,10 @@ export function Filters() {
   }, [priceFilter]);
 
   const onGenderFilterChange = (e) => {
-    setGenderFilter({ ...genderFilter, [e.target.name]: e.target.checked });
+    if (genderFilter.includes(e.target.name)) {
+      setGenderFilter(genderFilter.filter((size) => size !== e.target.name));
+    }
+    setGenderFilter([...genderFilter, e.target.name]);
   };
 
   const onSizesChange = (e) => {
@@ -82,9 +96,37 @@ export function Filters() {
   return (
     <div className="filters-container">
       <h2 className="filter-title">Filters</h2>
+      <div>
+        <button type="button" className="reset-btn" onClick={resetFilters}>
+          Reset
+        </button>
+        <h4>Active Filters</h4>
+        <div className="active-filters">
+          {sizes.length > 0 && (
+            <div className="active-filter">
+              <h4>Sizes</h4>
+              <ul>
+                {sizes.map((size, index) => {
+                  return <li key={index}>{size}</li>;
+                })}
+              </ul>
+            </div>
+          )}
+          {brands.length > 0 && (
+            <div className="active-filter">
+              <h4>Brands</h4>
+              <ul>
+                {brands.map((brand, index) => {
+                  return <li key={index}>{brand}</li>;
+                })}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
       <Accordion
         title="GENDER"
-        content={Object.keys(genderFilter).map((value, index) => {
+        content={['Male', 'Female', 'Unisex'].map((value, index) => {
           return (
             <div key={index}>
               <label htmlFor={value}>
@@ -166,34 +208,6 @@ export function Filters() {
           );
         })}
       />
-      <div>
-        <button type="button" className="reset-btn" onClick={resetFilters}>
-          Reset
-        </button>
-        <h4>Active Filters</h4>
-        <div className="active-filters">
-          {sizes.length > 0 && (
-            <div className="active-filter">
-              <h4>Sizes</h4>
-              <ul>
-                {sizes.map((size, index) => {
-                  return <li key={index}>{size}</li>;
-                })}
-              </ul>
-            </div>
-          )}
-          {brands.length > 0 && (
-            <div className="active-filter">
-              <h4>Brands</h4>
-              <ul>
-                {brands.map((brand, index) => {
-                  return <li key={index}>{brand}</li>;
-                })}
-              </ul>
-            </div>
-          )}
-        </div>
-      </div>
     </div>
   );
 }
