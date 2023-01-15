@@ -1,0 +1,17 @@
+.checkbox {
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+.filters-container {
+    margin-top: 60px;
+    width: 20rem;
+    border: 1px solid #eee;
+}
+
+.filter-title {
+    text-align: center;
+    margin: 10px;
+}
