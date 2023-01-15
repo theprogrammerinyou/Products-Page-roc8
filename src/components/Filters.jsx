@@ -30,31 +30,31 @@ export function Filters() {
     // filter products based on gender
     if (genderFilter.length > 0) {
       const filteredProducts = products.filter((p) => {
-        return genderFilter.includes(p.genderFilter);
+        return genderFilter.includes(p.gender);
       });
       setProducts(filteredProducts);
     }
+
     // filter
     if (sizes.length > 0 && brands.length > 0 && genderFilter.length > 0) {
       const filteredProducts = products.filter((p) => {
         return (
-          sizes.includes(p.Size) &&
-          brands.includes(p.Brand) &&
-          genderFilter.includes(p.genderFilter)
+          sizes.includes(p.Size) && brands.includes(p.Brand) && genderFilter.includes(p.gender)
         );
       });
       setProducts(filteredProducts);
     }
     // reset filter
-    if (sizes.length === 0 && brands.length === 0) {
+    if (sizes.length === 0 && brands.length === 0 && genderFilter.length === 0) {
       resetFilter();
     }
-  }, [sizes, brands]);
+  }, [sizes, brands, genderFilter]);
 
   useEffect(() => {
     // filter
     if (priceFilter === 'High to Low') {
       const filteredProducts = product.sort((a, b) => b.Price - a.Price);
+
       setProducts(filteredProducts);
     }
     if (priceFilter === 'Low to High') {
@@ -64,10 +64,13 @@ export function Filters() {
   }, [priceFilter]);
 
   const onGenderFilterChange = (e) => {
+    // add
+
     if (genderFilter.includes(e.target.name)) {
-      setGenderFilter(genderFilter.filter((size) => size !== e.target.name));
+      setGenderFilter(genderFilter.filter((gender) => gender !== e.target.name));
+    } else {
+      setGenderFilter([...genderFilter, e.target.name]);
     }
-    setGenderFilter([...genderFilter, e.target.name]);
   };
 
   const onSizesChange = (e) => {
@@ -126,7 +129,7 @@ export function Filters() {
       </div>
       <Accordion
         title="GENDER"
-        content={['Male', 'Female', 'Unisex'].map((value, index) => {
+        content={['Male', 'Female'].map((value, index) => {
           return (
             <div key={index}>
               <label htmlFor={value}>
