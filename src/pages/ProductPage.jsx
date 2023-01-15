@@ -1,12 +1,14 @@
 import { ProductCard } from 'components/ProductCard';
 import 'styles/productPage.css';
-import { products } from 'products';
+import { useProductContext } from 'context/product-context';
 
 export function ProductPage() {
+  const { product } = useProductContext();
+
   return (
     <div className="product-container">
-      {products.length > 0 &&
-        products.map(({ Name, Price, Brand, image, id, Description }) => {
+      {product.length > 0 &&
+        product.map(({ Name, Price, Brand, image, id, Description }) => {
           return (
             <ProductCard
               key={id}

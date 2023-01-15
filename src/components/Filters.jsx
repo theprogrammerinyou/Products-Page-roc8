@@ -1,40 +1,82 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useProductContext } from 'context/product-context';
+import { products } from 'products';
 import { Accordion } from './Accordion';
 import 'styles/Filters.css';
 
 export function Filters() {
-  const [genderFilter, setGenderFilter] = useState({
-    Male: false,
-    Female: false,
-    Unisex: false
-  });
+  const { product, setProducts, resetFilter, priceFilter, setPriceFilter } = useProductContext();
+  const [genderFilter, setGenderFilter] = useState([]);
 
-  const [sizes, setSizes] = useState({
-    Small: false,
-    Medium: false,
-    'X-Large': false,
-    Large: false
-  });
+  const [sizes, setSizes] = useState([]);
 
-  const [brands, setBrands] = useState({
-    'Allen Solly': false,
-    Addidas: false,
-    Puma: false,
-    'Lee Cooper': false,
-    'Ray Ban': false,
-    Nike: false
-  });
+  const [brands, setBrands] = useState([]);
+
+  useEffect(() => {
+    // filter products based on sizes
+    if (sizes.length > 0) {
+      const filteredProducts = products.filter((p) => {
+        return sizes.includes(p.Size);
+      });
+      setProducts(filteredProducts);
+    }
+    // filter products based on brands
+    if (brands.length > 0) {
+      const filteredProducts = products.filter((p) => {
+        return brands.includes(p.Brand);
+      });
+      setProducts(filteredProducts);
+    }
+    // filter
+    if (sizes.length > 0 && brands.length > 0) {
+      const filteredProducts = products.filter((p) => {
+        return sizes.includes(p.Size) && brands.includes(p.Brand);
+      });
+      setProducts(filteredProducts);
+    }
+    // reset filter
+    if (sizes.length === 0 && brands.length === 0) {
+      resetFilter();
+    }
+  }, [sizes, brands]);
+
+  useEffect(() => {
+    // filter
+    if (priceFilter === 'High to Low') {
+      const filteredProducts = product.sort((a, b) => b.Price - a.Price);
+      setProducts(filteredProducts);
+    }
+    if (priceFilter === 'Low to High') {
+      const filteredProducts = product.sort((a, b) => a.Price - b.Price);
+      setProducts(filteredProducts);
+    }
+  }, [priceFilter]);
 
   const onGenderFilterChange = (e) => {
     setGenderFilter({ ...genderFilter, [e.target.name]: e.target.checked });
   };
 
   const onSizesChange = (e) => {
-    setSizes({ ...sizes, [e.target.name]: e.target.checked });
+    if (sizes.includes(e.target.name)) {
+      setSizes(sizes.filter((size) => size !== e.target.name));
+    } else {
+      setSizes([...sizes, e.target.name]);
+    }
   };
 
   const onBrandsChange = (e) => {
-    setBrands({ ...brands, [e.target.name]: e.target.checked });
+    // add brand to brands array if selected and remove if unselected
+    if (brands.includes(e.target.name)) {
+      setBrands(brands.filter((brand) => brand !== e.target.name));
+    } else {
+      setBrands([...brands, e.target.name]);
+    }
+  };
+  const resetFilters = () => {
+    setSizes([]);
+    setBrands([]);
+    setGenderFilter([]);
+    resetFilter();
   };
 
   return (
@@ -63,7 +105,7 @@ export function Filters() {
       />
       <Accordion
         title="SIZES"
-        content={Object.keys(sizes).map((value, index) => {
+        content={['X-Large', 'Large', 'Small', 'Medium'].map((value, index) => {
           return (
             <div key={index}>
               <label htmlFor={value}>
@@ -84,7 +126,7 @@ export function Filters() {
       />
       <Accordion
         title="BRANDS"
-        content={Object.keys(brands).map((value, index) => {
+        content={['Allen Solly', 'Nike', 'Puma', 'Ray Ban'].map((value, index) => {
           return (
             <div key={index}>
               <label htmlFor={value}>
@@ -103,6 +145,55 @@ export function Filters() {
           );
         })}
       />
+      <Accordion
+        title="PRICE"
+        content={['High to Low', 'Low to High'].map((value, index) => {
+          return (
+            <div key={index}>
+              <label htmlFor={value}>
+                <input
+                  id={value}
+                  className="checkbox"
+                  type="radio"
+                  onChange={(e) => setPriceFilter(e.target.value)}
+                  name="price"
+                  value={value}
+                />
+                {value}
+              </label>
+              <br />
+            </div>
+          );
+        })}
+      />
+      <div>
+        <button type="button" className="reset-btn" onClick={resetFilters}>
+          Reset
+        </button>
+        <h4>Active Filters</h4>
+        <div className="active-filters">
+          {sizes.length > 0 && (
+            <div className="active-filter">
+              <h4>Sizes</h4>
+              <ul>
+                {sizes.map((size, index) => {
+                  return <li key={index}>{size}</li>;
+                })}
+              </ul>
+            </div>
+          )}
+          {brands.length > 0 && (
+            <div className="active-filter">
+              <h4>Brands</h4>
+              <ul>
+                {brands.map((brand, index) => {
+                  return <li key={index}>{brand}</li>;
+                })}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

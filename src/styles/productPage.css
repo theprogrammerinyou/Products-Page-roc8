@@ -5,11 +5,3 @@
   margin-top: 5rem;
   gap: 25px;
 }
-
-.card-shimmer {
-  background-color: lightgrey;
-  max-width: 300px;
-  border: 1px solid lightcyan;
-  height: 400px;
-  border-radius: 22px;
-}
